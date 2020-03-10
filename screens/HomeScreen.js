@@ -3,7 +3,6 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
-import { MonoText } from '../components/StyledText';
 
 export default function HomeScreen() {
   return (
@@ -26,7 +25,7 @@ export default function HomeScreen() {
           <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
 
           <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
+            <Text>screens/HomeScreen.js</Text>
           </View>
 
           <Text style={styles.getStartedText}>
@@ -45,7 +44,7 @@ export default function HomeScreen() {
         <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
 
         <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
+          < Text style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</ Text>
         </View>
       </View>
     </View>
