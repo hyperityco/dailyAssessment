@@ -2,7 +2,7 @@ const tintColor = '#2f95dc'
 
 export default {
   standardBackground: '#FFFFFF',
-  buttonColor: '#F1786C',
+  buttonColor: '#0A94CA',
   buttonText: 'white',
   standardText: '#E0DDF5',
   linkText: '#8B63E6',
