@@ -2,10 +2,11 @@ const tintColor = '#2f95dc'
 
 export default {
   standardBackground: '#FFFFFF',
-  buttonColor: '#0A94CA',
-  buttonText: 'white',
+  buttonColorBlue: '#0A94CA',
+  buttonTextWhite: '#FFFFFF',
+  buttonTextBlue: '#0A94CA',
   standardText: '#E0DDF5',
-  linkText: '#8B63E6',
+  linkTextBlue: '#0A94CA',
   //--------------------
   tabIconDefault: '#ccc',
   tabIconSelected: tintColor,

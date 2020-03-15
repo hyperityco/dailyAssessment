@@ -5,8 +5,9 @@ import { Ionicons } from '@expo/vector-icons'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import SplashLogo from './assets/images/lifter.png'
-import BottomTabNavigator from './navigation/BottomTabNavigator'
 import useLinking from './navigation/useLinking'
+import NewUser from './screens/NewUser'
+import Login from './screens/Login'
 
 const Stack = createStackNavigator()
 
@@ -56,7 +57,8 @@ const App = props => {
           initialState={initialNavigationState}
         >
           <Stack.Navigator>
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="NewUser" component={NewUser} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

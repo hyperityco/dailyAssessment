@@ -4,11 +4,11 @@ import { TextInput, StyleSheet } from 'react-native'
 const CustomInput = props => {
   return (
     <TextInput
-      style={styles.input}
       onChangeText={props.onChangeText}
       placeholder={props.placeholder}
-      textContentType={props.textContentType}
       secureTextEntry={props.secureTextEntry}
+      style={styles.input}
+      textContentType={props.textContentType}
     />
   )
 }

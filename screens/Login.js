@@ -1,23 +1,20 @@
 import React, { useState } from 'react'
-import {
-  View,
-  StyleSheet,
-  Image,
-  Text,
-  ImageBackground,
-  StatusBar,
-} from 'react-native'
+import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import StyledButton from '../components/StyledButton'
 import CustomInput from '../components/CustomInput'
 import Colors from '../constants/Colors'
 import loginBackground from '../assets/images/loginBackground.png'
 import logoWhite from '../assets/images/logoWhite.png'
 
-const Login = () => {
+const Login = ({ navigation }) => {
   const [credentials, setCredentials] = useState({})
 
   const handleSubmit = () => {
     // @TODO: submit credentials to auth service. on return of successful login: pull user data & navigate to different screen
+  }
+
+  const newUserScreen = () => {
+    navigation.navigate('NewUser')
   }
 
   return (
@@ -51,9 +48,20 @@ const Login = () => {
               </View>
             </View>
             <View style={styles.submitButtom}>
-              <StyledButton title="Login" onPress={handleSubmit} />
-              <Text onPress style={styles.text}>
-                New to Hyperity? Click here
+              <StyledButton
+                title="Login"
+                onPress={handleSubmit}
+                buttonColor={Colors.buttonColorBlue}
+                textColor={Colors.buttonTextWhite}
+              />
+            </View>
+            <View style={styles.textContainer}>
+              <Text style={styles.text}>
+                New to Hyperity?
+                <Text style={styles.newUserLink} onPress={newUserScreen}>
+                  {' '}
+                  Click here
+                </Text>
               </Text>
             </View>
           </View>
@@ -100,8 +108,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 40,
   },
+  textContainer: {
+    marginBottom: 25,
+  },
   text: {
     marginTop: 10,
     textAlign: 'center',
+  },
+  newUserLink: {
+    color: Colors.linkTextBlue,
   },
 })
